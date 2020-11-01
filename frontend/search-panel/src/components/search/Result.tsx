@@ -59,6 +59,8 @@ const Result: React.FC<ResultProps> = ({
         });
   if (totalPages === 0) {
     return null;
+  } else if (results.length === 0) {
+    return <div>No results found. Set to blury search?</div>;
   }
   return (
     <div className="table-area">

@@ -7,6 +7,7 @@ import { createFalse } from "typescript";
 
 function Search() {
   const [label, setLabel] = useState<string>("");
+  const [isSearching, setIsSearching] = useState<boolean>(false);
   const [searchValue, setSearchValue] = useState<string>("");
   const [isExact, setIsExact] = useState<boolean>(false);
   const [searchOption, setSearchOption] = useState<string>("product");
@@ -27,15 +28,22 @@ function Search() {
 
     setResults(results);
     setResultCount(count);
-    setSearchValue("");
+    // setSearchValue("");
   };
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSearching(true);
     if (searchValue === "") return;
     setLabel(searchValue);
     searchByPage(1);
   };
+
+  useEffect(() => {
+    if (results.length > 0) {
+      setIsSearching(false);
+    }
+  }, [results]);
 
   return (
     <div>
@@ -66,13 +74,17 @@ function Search() {
           <label>Exact Search</label>
         </div>
       </form>
-      <Result
-        results={results}
-        count={resultCount}
-        label={label}
-        option={searchOption}
-        setPage={searchByPage}
-      />
+      {isSearching ? (
+        <div>Please wait......</div>
+      ) : (
+        <Result
+          results={results}
+          count={resultCount}
+          label={label}
+          option={searchOption}
+          setPage={searchByPage}
+        />
+      )}
     </div>
   );
 }

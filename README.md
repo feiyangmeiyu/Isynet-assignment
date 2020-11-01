@@ -34,5 +34,11 @@ Documentation of the api design could be found at [api docs](127.0.0.0.1:8000/ap
 
 #### Time used in each part (Approximately)
 
- - Refresh DRF framework
- - Set Django project, set connection to MySQL database
+ - Refresh how DRF framework works, django queryset filter, APIView: 2h
+ - Set Django project, set connection to MySQL database: 1h
+ - Process data, store to MySQL database, add id: 1h
+ - API design, implementation: 4h
+ - Frontend: search page, product detail page: 4h
+ - API debugging using postman: 1h
+ - Other debugging: cors error, pagination: 2h
+ 

@@ -1,0 +1,130 @@
+/************ Search Area **************/
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 20px;
+}
+
+/* .search-input {
+  width: 60px;
+  height: 20px;
+} */
+
+.search-dropdown {
+  margin: 0 20px;
+}
+.search-btn {
+  margin-left: 20px;
+}
+
+.search-checkbox {
+  margin-left: 10px;
+}
+/********** DATA TABLE **************/
+/**/
+.table-area {
+  /* height: 500px; */
+  width: 700px;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+.result-table {
+  border-collapse: collapse;
+  margin: 20px auto;
+  /* padding: 10px 50px;
+    width: 100%; */
+  text-align: center;
+  border-spacing: 2px;
+  border: 1px grey solid;
+  border-radius: 3px;
+}
+
+.result-table td,
+.result-table th {
+  min-height: 30px;
+  height: 30px;
+  border-right-style: solid;
+  border-left-style: solid;
+  border: 1px lightgrey solid;
+}
+
+.result-table tr th {
+  background-color: lightgrey;
+
+  width: 100px;
+}
+
+table tr:nth-child(odd) {
+  /* background: #fff; */
+}
+
+table tr:nth-child(even) {
+  /* background: #f5fafa; */
+}
+
+/************ Pagination CSS style **************/
+.page-group {
+  text-align: center;
+}
+
+.page-group > button {
+  color: black;
+  font-size: 15px;
+  height: 30px;
+  line-height: 20px;
+  padding: 0 25px;
+  background-color: white;
+  border-color: black;
+  /* position: relative; */
+  border-radius: 2px;
+  margin: 10px 2px;
+  overflow: hidden;
+}
+
+.page-group > button.btn-active {
+  background-color: black;
+  color: white;
+}
+
+.page-group > button:active {
+  top: 2px; /**downwards 2px **/
+}
+
+.page-group > button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*A dense table*/
+.dense-table {
+  border: black 1px solid;
+  border-collapse: collapse;
+  margin: 20px auto;
+  border-spacing: 2px;
+  /* padding: 10px 50px; */
+  /* width: 100%; */
+  /* text-align: center; */
+}
+
+.dense-table td,
+.dense-table th {
+  /* border: 1px solid #cad9ea; */
+
+  /* color: #666; */
+  min-height: 30px;
+  height: 30px;
+  border-right-style: solid;
+  border-left-style: solid;
+  border: 1px grey solid;
+}
+
+.dense-table th {
+  background: lightgrey;
+}
+
+.dense-table tbody > tr > td:first-child {
+  font-weight: bold;
+}
